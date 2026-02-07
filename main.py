@@ -1,24 +1,16 @@
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
-
-
-
 from bot import Bot
+import asyncio
 
 app = Bot()
-app.run()
 
+async def main():
+    await app.start()
+    print("Bot started successfully!")
+    # বটটিকে সচল রাখার জন্য লুপ
+    await asyncio.Event().wait()
 
-
-
-
-
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+if __name__ == "__main__":
+    try:
+        app.run()
+    except KeyboardInterrupt:
+        pass
