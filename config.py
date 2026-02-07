@@ -9,13 +9,13 @@
 import os
 
 class Config:
-    API_ID = os.environ.get("API_ID", "28776072")
-    API_HASH = os.environ.get("API_HASH", "b3a786dce1f4e7d56674b7cadfde3c9d")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7902709403:AAFw_GZyDZp3WLtSOConKOyx5uoGVwqdS2g") 
+    API_ID = os.environ.get("API_ID", "24670806")
+    API_HASH = os.environ.get("API_HASH", "82134723a32b2cae76b9cfb3b1570745")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7933011109:AAEh6m_MoKYtHHbOvJfJeXWZxBHIYUPJ3Tc") 
     BOT_SESSION = os.environ.get("BOT_SESSION", "ftm-forward-bot") 
-    DB_URL = os.environ.get("DB_URL", "mongodb+srv://ftm:ftm@cluster0.g1opc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DB_URL = os.environ.get("DB_URL", "mongodb+srv://botuser:botuserpass1234@cluster0.bcz3n2q.mongodb.net/?retryWrites=true&w=majority")
     DB_NAME = os.environ.get("DB_NAME", "Cluster0")
-    OWNER_ID = [int(id) for id in os.environ.get("OWNER_ID", '7711039923').split()]
+    OWNER_ID = [int(id) for id in os.environ.get("OWNER_ID", '8229228616').split()]
 
 
 class temp(object): 
