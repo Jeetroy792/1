@@ -1,16 +1,18 @@
 from bot import Bot
 import asyncio
+from pyrogram import idle
 
 app = Bot()
 
-async def main():
+async def start_bot():
     await app.start()
-    print("Bot started successfully!")
-    # বটটিকে সচল রাখার জন্য লুপ
-    await asyncio.Event().wait()
+    print("--- BOT STARTED SUCCESSFULLY ---")
+    await idle() # এটি বটকে বন্ধ হওয়া থেকে আটকাবে
+    await app.stop()
 
 if __name__ == "__main__":
     try:
-        app.run()
-    except KeyboardInterrupt:
-        pass
+        # সরাসরি run() এর বদলে লুপ ব্যবহার করা বেশি নিরাপদ
+        app.run() 
+    except Exception as e:
+        print(f"Error: {e}")
