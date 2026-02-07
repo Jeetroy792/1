@@ -2,17 +2,13 @@ from bot import Bot
 import asyncio
 from pyrogram import idle
 
-app = Bot()
-
-async def start_bot():
+async def start_services():
+    app = Bot()
     await app.start()
-    print("--- BOT STARTED SUCCESSFULLY ---")
-    await idle() # এটি বটকে বন্ধ হওয়া থেকে আটকাবে
+    print("--- BOT IS RUNNING ---")
+    await idle() # এটি প্রসেসটিকে থামিয়ে রাখবে
     await app.stop()
 
 if __name__ == "__main__":
-    try:
-        # সরাসরি run() এর বদলে লুপ ব্যবহার করা বেশি নিরাপদ
-        app.run() 
-    except Exception as e:
-        print(f"Error: {e}")
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(start_services())
